@@ -43,7 +43,7 @@ $(function() {
             //模拟人的点击行为
             $('#link_login').click();
         })
-    })
+    });
 
     //监听登录表单的提交事件
     $('#form_login').submit(function(e) {
@@ -60,11 +60,10 @@ $(function() {
                 }
                 layer.msg('登录成功！');
                 //将登录成功得到的token字符串，保存到localStorage中
-                localStorage.setItem('token', res.token)
-                    //跳转到后台页面 
-                location.href = '/index.html'
+                localStorage.setItem('token', res.token);
+                //跳转到后台页面 
+                location.href = '/index.html';
             }
-
         })
     })
 })
